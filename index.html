@@ -96,7 +96,7 @@
       border: 1px solid black;
       text-align: center;
       margin: 2px;
-      background-color: lightblue;
+      background-color: #eafbe7;
       display: inline-block;
       padding: 5px;
     }
@@ -214,7 +214,7 @@
       chartData.forEach(block => {
         const div = document.createElement("div");
         div.className = "process-block";
-        div.style.width = `${(block.end - block.start) * 20}px`;
+        div.style.width = `${(block.end - block.start) * 30}px`;
         div.textContent = `${block.name} (${block.start}-${block.end})`;
         ganttChartDiv.appendChild(div);
       });
