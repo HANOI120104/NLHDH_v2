@@ -109,10 +109,10 @@
     <div class="input-section">
       <label for="job-name">Tên công việc:</label>
       <input type="text" id="job-name" placeholder="Ví dụ: Job1">
-      <label for="burst-time">Thời gian thực hiện (Burst Time):</label>
-      <input type="number" id="burst-time" placeholder="Ví dụ: 5">
       <label for="arrival-time">Thời gian đến (Arrival Time):</label>
       <input type="number" id="arrival-time" placeholder="Ví dụ: 0">
+      <label for="burst-time">Thời gian thực hiện (Burst Time):</label>
+      <input type="number" id="burst-time" placeholder="Ví dụ: 5">
       <button id="add-job">Thêm công việc</button>
     </div>
     <div class="jobs-table">
@@ -121,8 +121,8 @@
         <thead>
           <tr>
             <th>Tên công việc</th>
-            <th>Thời gian thực hiện</th>
             <th>Thời gian đến</th>
+            <th>Thời gian thực hiện</th>
           </tr>
         </thead>
         <tbody id="jobs-list"></tbody>
@@ -203,7 +203,7 @@
     function updateJobsList() {
       const jobsList = document.getElementById("jobs-list");
       jobsList.innerHTML = jobs
-        .map(job => `<tr><td>${job.name}</td><td>${job.burstTime}</td><td>${job.arrivalTime}</td></tr>`)
+        .map(job => `<tr><td>${job.name}</td><td>${job.arrivalTime}</td><td>${job.burstTime}</td></tr>`)
         .join("");
     }
 
